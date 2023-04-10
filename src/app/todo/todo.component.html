@@ -1,0 +1,30 @@
+<nav class="navbar" style="background-color: rgb(230, 0, 255);">
+    <div class="container-fluid">
+      <a class="navbar-brand text-white" href="#">To Do App</a>
+    </div>
+  </nav>
+
+  <div class="container mt-5">
+    <div class="card mx-auto" style="width:18rem">
+        <input type="text" name="" id="" class="form-control" [(ngModel)]="todo.text">
+        <button class="btn btn-danger mt-2" (click)="addToDo()">Add</button>
+    </div>
+  </div>
+
+
+  <div class="row container d-flex justify-content-center mx-auto mt-2">
+    <div class="col-md-12">
+        <div class="card px-3">
+            <div class="card-body">
+                <h4 class="card-title">Todo list</h4>
+                <table>
+                    <tr *ngFor="let td of todoArr">
+                      <td>{{td.text}}</td>
+                      <td><button (click)="deleteTodo(td)" class="btn btn-danger">X</button></td>
+
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
